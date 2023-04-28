@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Vanilla Weather App</title>
   </head>
   <body>
@@ -23,10 +24,10 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>London</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Friday 11:57</li>
-              <li>Clear</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -38,15 +39,15 @@
                   id="icon"
                 />
                 <div class="float-left">
-                  <strong>12</strong><span class="units">°C | °F</span>
+                  <strong id="temperature"></strong
+                  ><span class="units">°C | °F</span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 73%</li>
-                <li>Wing: 2km/h</li>
+                <li>Humidity: <span id="Humidity"></span>%</li>
+                <li>Wing: <span id="wind"></span>Km/H</li>
               </ul>
             </div>
           </div>
