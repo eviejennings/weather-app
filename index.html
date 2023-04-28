@@ -17,13 +17,19 @@
     ></script>
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Vanilla Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-3">
+          <form id="search-form" class="mb-4 mt-2">
             <div class="row">
               <div class="col-9">
                 <input
@@ -44,9 +50,9 @@
             </div>
           </form>
           <div class="overview">
-            <h1 id="city"></h1>
+            <h1 id="city" class="mb-3"></h1>
             <ul>
-              <li><span id="date"></span></li>
+              <li><span id="date"> </span></li>
               <li id="description"></li>
             </ul>
           </div>

@@ -1,10 +1,10 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 h1 {
-  color: #878787;
+  color: #0d6efd;
   display: block;
-  font-weight: 100;
+  font-weight: 600;
   line-height: 28px;
   margin-bottom: 0;
 }
@@ -30,7 +30,7 @@ ul {
 .weather-app {
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 .overview {
   margin-bottom: 20px;
@@ -55,4 +55,10 @@ ul {
 .weather-temperature .active {
   color: black;
   cursor: default;
+}
+#search-form #city-input {
+  border-radius: 20px;
+}
+#search-form .btn-primary {
+  border-radius: 20px;
 }
