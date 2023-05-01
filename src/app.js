@@ -24,7 +24,15 @@ function formatDate(timestamp) {
   return `${day} ${hours} : ${minutes}`;
 }
 
-function displayForecast() {
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "ae4fe30b0a36b3of8f1b54a6ecf83t04";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -78,6 +86,8 @@ function displayTemperature(response) {
   );
 
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
